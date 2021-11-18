@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 const path = require("path");
+const port = process.env.PORT || 3000;
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
@@ -14,6 +15,6 @@ app.get("/", (req, res) => {
 });
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+  console.log(`Example app listening on port ${port}`);
 });
 
